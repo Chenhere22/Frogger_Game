@@ -231,10 +231,10 @@ class Timer:
         timer_pen.pendown()
 
         # Draw the timer bar
-        timer_pen.pensize(5)
+        timer_pen.pensize(15)
         
         # Draw the green part of the timer
-        timer_pen.color("green")
+        timer_pen.color("blue")
         timer_pen.forward(dx)
 
         # Draw the remaining red part
