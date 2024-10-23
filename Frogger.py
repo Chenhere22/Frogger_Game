@@ -252,11 +252,11 @@ player = Player(0, -300, 40, 40, r"frogger.gif")
 timer = Timer(60)
 
 level_1= [
-    Car(0, -250, 80, 40, r"car_left.gif", -0.2),
-    Car(180, -250, 80, 40, r"car_left.gif", -0.2),
+    Car(0, -250, 80, 40, r"car_left.gif", -0.25),
+    Car(180, -250, 80, 40, r"car_left.gif", -0.25),
 
-    Car(0, -200, 80, 40, r"car_right.gif", +0.2),
-    Car(180, -200, 80, 40, r"car_right.gif", +0.2),
+    Car(0, -200, 80, 40, r"car_right.gif", +0.25),
+    Car(180, -200, 80, 40, r"car_right.gif", +0.25),
 
     Car(0, -150, 80, 40, r"car_left.gif", -0.1),
     Car(180, -150, 80, 40, r"car_left.gif", -0.1),
