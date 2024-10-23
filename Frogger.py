@@ -8,21 +8,21 @@ wn.cv._rootwindow.resizable(False, False)
 wn.title("Frogger by Li")
 wn.setup(600, 800)
 wn.bgcolor("black")
-wn.bgpic(r"C:\Users\omara\Documents\Frogger\bg.gif")
+wn.bgpic(r"bg.gif")
 wn.tracer(0)
 
 # Register shapes (ensure paths are correct)
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\frogger.gif")
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\car_left.gif")
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\car_right.gif")
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\log.gif")
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\turtles_right.gif")
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\turtles_left.gif")
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\turtles_right_half.gif")
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\turtles_left_half.gif")
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\turtles_submerged.gif")
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\goal.gif")
-wn.register_shape(r"C:\Users\omara\Documents\Frogger\frog_small.gif")
+wn.register_shape(r"frogger.gif")
+wn.register_shape(r"car_left.gif")
+wn.register_shape(r"car_right.gif")
+wn.register_shape(r"log.gif")
+wn.register_shape(r"turtles_right.gif")
+wn.register_shape(r"turtles_left.gif")
+wn.register_shape(r"turtles_right_half.gif")
+wn.register_shape(r"turtles_left_half.gif")
+wn.register_shape(r"turtles_submerged.gif")
+wn.register_shape(r"goal.gif")
+wn.register_shape(r"frog_small.gif")
 
 pen = turtle.Turtle()
 pen.speed(0)
@@ -171,16 +171,16 @@ class Turtle(Sprite):
         # Update image based on state
         if self.state == "full":
             if self.dx > 0:
-                self.image = r"C:\Users\omara\Documents\Frogger\turtles_right.gif"
+                self.image = r"turtles_right.gif"
             else:
-                self.image = r"C:\Users\omara\Documents\Frogger\turtles_left.gif"
+                self.image = r"turtles_left.gif"
         elif self.state == "half_up" or self.state == "half_down":
             if self.dx > 0:
-                self.image = r"C:\Users\omara\Documents\Frogger\turtles_right_half.gif"
+                self.image = r"turtles_right_half.gif"
             else:
-                self.image = r"C:\Users\omara\Documents\Frogger\turtles_left_half.gif"
+                self.image = r"turtles_left_half.gif"
         elif self.state == "submerged":
-            self.image = r"C:\Users\omara\Documents\Frogger\turtles_submerged.gif"
+            self.image = r"turtles_submerged.gif"
 
         # State transitions based on timer
         if self.state == "full" and time.time() - self.start_time > self.full_time:
@@ -248,47 +248,47 @@ class Timer:
 
 
 # Create player and other sprites
-player = Player(0, -300, 40, 40, r"C:\Users\omara\Documents\Frogger\frogger.gif")
+player = Player(0, -300, 40, 40, r"frogger.gif")
 timer = Timer(60)
 
 level_1= [
-    Car(0, -250, 80, 40, r"C:\Users\omara\Documents\Frogger\car_left.gif", -0.2),
-    Car(180, -250, 80, 40, r"C:\Users\omara\Documents\Frogger\car_left.gif", -0.2),
+    Car(0, -250, 80, 40, r"car_left.gif", -0.2),
+    Car(180, -250, 80, 40, r"car_left.gif", -0.2),
 
-    Car(0, -200, 80, 40, r"C:\Users\omara\Documents\Frogger\car_right.gif", +0.2),
-    Car(180, -200, 80, 40, r"C:\Users\omara\Documents\Frogger\car_right.gif", +0.2),
+    Car(0, -200, 80, 40, r"car_right.gif", +0.2),
+    Car(180, -200, 80, 40, r"car_right.gif", +0.2),
 
-    Car(0, -150, 80, 40, r"C:\Users\omara\Documents\Frogger\car_left.gif", -0.1),
-    Car(180, -150, 80, 40, r"C:\Users\omara\Documents\Frogger\car_left.gif", -0.1),
+    Car(0, -150, 80, 40, r"car_left.gif", -0.1),
+    Car(180, -150, 80, 40, r"car_left.gif", -0.1),
 
-    Car(0, -100, 80, 40, r"C:\Users\omara\Documents\Frogger\car_right.gif", +0.1),
-    Car(180, -100, 80, 40, r"C:\Users\omara\Documents\Frogger\car_right.gif", +0.1),
+    Car(0, -100, 80, 40, r"car_right.gif", +0.1),
+    Car(180, -100, 80, 40, r"car_right.gif", +0.1),
 
-    Car(0, -50, 80, 40, r"C:\Users\omara\Documents\Frogger\car_left.gif", -0.1),
-    Car(180, -50, 80, 40, r"C:\Users\omara\Documents\Frogger\car_left.gif", -0.1),
+    Car(0, -50, 80, 40, r"car_left.gif", -0.1),
+    Car(180, -50, 80, 40, r"car_left.gif", -0.1),
 
-    Log(0, 50, 160, 40, r"C:\Users\omara\Documents\Frogger\log.gif", +0.2),
-    Log(260, 50, 160, 40, r"C:\Users\omara\Documents\Frogger\log.gif", +0.2),
+    Log(0, 50, 160, 40, r"log.gif", +0.2),
+    Log(260, 50, 160, 40, r"log.gif", +0.2),
 
-    Log(0, 100, 160, 40, r"C:\Users\omara\Documents\Frogger\log.gif", -0.2),
-    Log(260, 100, 160, 40, r"C:\Users\omara\Documents\Frogger\log.gif", -0.2),
+    Log(0, 100, 160, 40, r"log.gif", -0.2),
+    Log(260, 100, 160, 40, r"log.gif", -0.2),
 
-    Turtle(0, 150, 150, 40, r"C:\Users\omara\Documents\Frogger\turtles_right.gif", +0.2),
-    Turtle(250, 150, 150, 40, r"C:\Users\omara\Documents\Frogger\turtles_right.gif", +0.2),
+    Turtle(0, 150, 150, 40, r"turtles_right.gif", +0.2),
+    Turtle(250, 150, 150, 40, r"turtles_right.gif", +0.2),
 
-    Turtle(0, 200, 160, 40, r"C:\Users\omara\Documents\Frogger\turtles_left.gif", -0.2),
-    Turtle(260, 200, 160, 40, r"C:\Users\omara\Documents\Frogger\turtles_left.gif", -0.2),
+    Turtle(0, 200, 160, 40, r"turtles_left.gif", -0.2),
+    Turtle(260, 200, 160, 40, r"turtles_left.gif", -0.2),
 
-    Log(0, 250, 160, 40, r"C:\Users\omara\Documents\Frogger\log.gif", +0.2),
-    Log(260, 250, 160, 40, r"C:\Users\omara\Documents\Frogger\log.gif", +0.2)
+    Log(0, 250, 160, 40, r"log.gif", +0.2),
+    Log(260, 250, 160, 40, r"log.gif", +0.2)
     ]
 
 homes =[
-   Home(0,300, 40, 40,  r"C:\Users\omara\Documents\Frogger\goal.gif"),
-   Home(-150,300, 40, 40,  r"C:\Users\omara\Documents\Frogger\goal.gif"),
-   Home(-250,300, 40, 40,  r"C:\Users\omara\Documents\Frogger\goal.gif"),
-   Home(150,300, 40, 40,  r"C:\Users\omara\Documents\Frogger\goal.gif"),
-   Home(250,300, 40, 40,  r"C:\Users\omara\Documents\Frogger\goal.gif")
+   Home(0,300, 40, 40,  r"goal.gif"),
+   Home(-150,300, 40, 40,  r"goal.gif"),
+   Home(-250,300, 40, 40,  r"goal.gif"),
+   Home(150,300, 40, 40,  r"goal.gif"),
+   Home(250,300, 40, 40,  r"goal.gif")
    ]
 
 
@@ -328,7 +328,7 @@ while True:
 
     #render the lives
     pen.goto(-290, -375) 
-    pen.shape(r"C:\Users\omara\Documents\Frogger\frog_small.gif")  
+    pen.shape(r"frog_small.gif")  
     for life in range(player.lives):
         pen.goto(-280 +(life *30), -375)
         pen.stamp()   
@@ -373,7 +373,7 @@ while True:
     for sprite in sprites:
         if isinstance(sprite, Home) and sprite.is_occupied:
             pen.goto(sprite.x, sprite.y)
-            pen.shape(r"C:\Users\omara\Documents\Frogger\frogger.gif")
+            pen.shape(r"frogger.gif")
             pen.stamp()
 
     # When player loses all lives or after placing all frogs:
